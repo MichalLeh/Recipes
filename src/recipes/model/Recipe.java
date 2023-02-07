@@ -56,5 +56,6 @@ public class Recipe {
         category = recipe.category;
         ingredients = recipe.ingredients;
         directions = recipe.directions;
+        date = LocalDateTime.now();
     }
 }
