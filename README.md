@@ -4,7 +4,7 @@ Multi-user web service with Spring Boot that allows storing, retrieving, updatin
 Spring Boot implementation of [Hyperskill's]( https://hyperskill.org/projects/180) project that includes JSON, REST API, Spring Boot Security, H2 database, LocalDateTime, Project Lombok concepts.
 The program is a multi-user web service that allows storing, retrieving, updating, and deleting recipes.
 
-**Example 1:** a `POST /api/recipe/new` request without authentication.
+**Example 1:** a `POST /api/recipe/new` request without authentication
 
 *Request body:*
 
@@ -53,7 +53,7 @@ Further `POST /api/recipe/new` request with basic authentication; email (login):
 }
 ```
 
-Further  `PUT /api/recipe/1` *request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary*
+Further  `PUT /api/recipe/1` request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary
 
 *Request body:*
 
@@ -69,7 +69,7 @@ Further  `PUT /api/recipe/1` *request with basic authentication; email (login): 
 
 Status code: `204 (No Content) `
 
-Further  `GET /api/recipe/1` *request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary*
+Further  `GET /api/recipe/1` request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary
 
 *Response:*
 ```
@@ -83,7 +83,7 @@ Further  `GET /api/recipe/1` *request with basic authentication; email (login): 
 }
 ```
 
-**Example 3:** a `POST /api/register` *request*
+**Example 3:** a `POST /api/register` request
 
 *Request body:*
 
@@ -96,7 +96,7 @@ Further  `GET /api/recipe/1` *request with basic authentication; email (login): 
 
 Status code: `200 (Ok)`
 
-Further  `GET /api/recipe/1` * request with basic authentication; email (login): CamelCaseRecipe@somewhere.com, password: C00k1es.*
+Further  `GET /api/recipe/1` request with basic authentication; email (login): CamelCaseRecipe@somewhere.com, password: C00k1es
 
 *Response:*
 
@@ -111,7 +111,7 @@ Further  `GET /api/recipe/1` * request with basic authentication; email (login):
 }
 ```
 
-Further  `PUT /api/recipe/1` * request with basic authentication; email (login): CamelCaseRecipe@somewhere.com, password: C00k1es.*
+Further  `PUT /api/recipe/1` request with basic authentication; email (login): CamelCaseRecipe@somewhere.com, password: C00k1es
 
 *Request body:*
 
@@ -127,11 +127,11 @@ Further  `PUT /api/recipe/1` * request with basic authentication; email (login):
 ```
 Status code: ` 403 (Forbidden)`
 
-Further  `DELETE /api/recipe/1` * request with basic authentication; email (login): CamelCaseRecipe@somewhere.com, password: C00k1es.*
+Further  `DELETE /api/recipe/1` request with basic authentication; email (login): CamelCaseRecipe@somewhere.com, password: C00k1es
 
 Status code: ` 403 (Forbidden)`
 
-**Example 4:** a  `POST /api/recipe/new` *request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary*
+**Example 4:** a  `POST /api/recipe/new` request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary
 
 *Request body:*
 
@@ -153,7 +153,7 @@ Status code: ` 403 (Forbidden)`
 }
 ```
 
-Further  `POST /api/recipe/new` *request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary*
+Further  `POST /api/recipe/new` request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary
 
 *Request body:*
 
@@ -175,7 +175,7 @@ Further  `POST /api/recipe/new` *request with basic authentication; email (login
 }
 ```
 
-Further  `POST /api/recipe/new` *request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary*
+Further  `POST /api/recipe/new` request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary
 
 *Request body:*
 
@@ -197,7 +197,7 @@ Further  `POST /api/recipe/new` *request with basic authentication; email (login
 }
 ```
 
-**Example 5:**  *Response for the * `GET /api/recipe/search/?category=dessert` *request*
+**Example 5:**  Response for the `GET /api/recipe/search/?category=dessert` request
 
 ```
 {
