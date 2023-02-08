@@ -19,19 +19,19 @@ The program is a multi-user web service that allows storing, retrieving, updatin
 ```
 Status code: `401 (Unauthorized)`
 
-**Example 2:** a `POST /api/register` request.
+**Example 2:** a `POST /api/register` request
 
 *Request body:*
 
 ```
 {
-   "email": "Cook_Programmer@somewhere.com",
+   "email": "MichalProgrammer@some.com",
    "password": "RecipeInBinary"
 }
 ```
 Status code: `200 (Ok) `
 
-Further `POST /api/recipe/new` request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary
+Further `POST /api/recipe/new` request with basic authentication; email (login): "MichalProgrammer@some.com", and password: RecipeInBinary
 
 *Request body:*
 
@@ -53,7 +53,7 @@ Further `POST /api/recipe/new` request with basic authentication; email (login):
 }
 ```
 
-Further  `PUT /api/recipe/1` request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary
+Further  `PUT /api/recipe/1` request with basic authentication; email (login): "MichalProgrammer@some.com", and password: RecipeInBinary
 
 *Request body:*
 
@@ -69,7 +69,7 @@ Further  `PUT /api/recipe/1` request with basic authentication; email (login): C
 
 Status code: `204 (No Content) `
 
-Further  `GET /api/recipe/1` request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary
+Further  `GET /api/recipe/1` request with basic authentication; email (login): "MichalProgrammer@some.com", and password: RecipeInBinary
 
 *Response:*
 ```
@@ -131,7 +131,7 @@ Further  `DELETE /api/recipe/1` request with basic authentication; email (login)
 
 Status code: ` 403 (Forbidden)`
 
-**Example 4:** a  `POST /api/recipe/new` request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary
+**Example 4:** a  `POST /api/recipe/new` request with basic authentication; email (login): "MichalProgrammer@some.com", and password: RecipeInBinary
 
 *Request body:*
 
@@ -153,7 +153,7 @@ Status code: ` 403 (Forbidden)`
 }
 ```
 
-Further  `POST /api/recipe/new` request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary
+Further  `POST /api/recipe/new` request with basic authentication; email (login): "MichalProgrammer@some.com", and password: RecipeInBinary
 
 *Request body:*
 
@@ -175,7 +175,7 @@ Further  `POST /api/recipe/new` request with basic authentication; email (login)
 }
 ```
 
-Further  `POST /api/recipe/new` request with basic authentication; email (login): Cook_Programmer@somewhere.com, and password: RecipeInBinary
+Further  `POST /api/recipe/new` request with basic authentication; email (login): "MichalProgrammer@some.com", and password: RecipeInBinary
 
 *Request body:*
 
