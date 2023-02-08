@@ -25,13 +25,13 @@ Status code: `401 (Unauthorized)`
 
 ```
 {
-   "email": "MichalProgrammer@some.com",
-   "password": "RecipeInBinary"
+   "email": "Michal@some.com",
+   "password": "Recipe123"
 }
 ```
 Status code: `200 (Ok) `
 
-Further `POST /api/recipe/new` request with basic authentication; email (login): "MichalProgrammer@some.com", and password: RecipeInBinary
+Further `POST /api/recipe/new` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
 *Request body:*
 
@@ -53,7 +53,7 @@ Further `POST /api/recipe/new` request with basic authentication; email (login):
 }
 ```
 
-Further  `PUT /api/recipe/1` request with basic authentication; email (login): "MichalProgrammer@some.com", and password: RecipeInBinary
+Further  `PUT /api/recipe/1` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
 *Request body:*
 
@@ -69,7 +69,7 @@ Further  `PUT /api/recipe/1` request with basic authentication; email (login): "
 
 Status code: `204 (No Content) `
 
-Further  `GET /api/recipe/1` request with basic authentication; email (login): "MichalProgrammer@some.com", and password: RecipeInBinary
+Further  `GET /api/recipe/1` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
 *Response:*
 ```
@@ -89,14 +89,14 @@ Further  `GET /api/recipe/1` request with basic authentication; email (login): "
 
 ```
 {
-   "email": "CamelCaseRecipe@somewhere.com",
+   "email": "Programmer@some.com",
    "password": "C00k1es."
 }
 ```
 
 Status code: `200 (Ok)`
 
-Further  `GET /api/recipe/1` request with basic authentication; email (login): CamelCaseRecipe@somewhere.com, password: C00k1es
+Further  `GET /api/recipe/1` request with basic authentication; email (login): Programmer@some.com, password: C00k1es
 
 *Response:*
 
@@ -111,7 +111,7 @@ Further  `GET /api/recipe/1` request with basic authentication; email (login): C
 }
 ```
 
-Further  `PUT /api/recipe/1` request with basic authentication; email (login): CamelCaseRecipe@somewhere.com, password: C00k1es
+Further  `PUT /api/recipe/1` request with basic authentication; email (login): Programmer@some.com, password: C00k1es
 
 *Request body:*
 
@@ -127,11 +127,11 @@ Further  `PUT /api/recipe/1` request with basic authentication; email (login): C
 ```
 Status code: ` 403 (Forbidden)`
 
-Further  `DELETE /api/recipe/1` request with basic authentication; email (login): CamelCaseRecipe@somewhere.com, password: C00k1es
+Further  `DELETE /api/recipe/1` request with basic authentication; email (login): Programmer@some.com, password: C00k1es
 
 Status code: ` 403 (Forbidden)`
 
-**Example 4:** a  `POST /api/recipe/new` request with basic authentication; email (login): "MichalProgrammer@some.com", and password: RecipeInBinary
+**Example 4:** a  `POST /api/recipe/new` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
 *Request body:*
 
@@ -153,7 +153,7 @@ Status code: ` 403 (Forbidden)`
 }
 ```
 
-Further  `POST /api/recipe/new` request with basic authentication; email (login): "MichalProgrammer@some.com", and password: RecipeInBinary
+Further  `POST /api/recipe/new` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
 *Request body:*
 
@@ -175,7 +175,7 @@ Further  `POST /api/recipe/new` request with basic authentication; email (login)
 }
 ```
 
-Further  `POST /api/recipe/new` request with basic authentication; email (login): "MichalProgrammer@some.com", and password: RecipeInBinary
+Further  `POST /api/recipe/new` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
 *Request body:*
 
