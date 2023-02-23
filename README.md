@@ -4,7 +4,79 @@ Multi-user web service with Spring Boot that allows storing, retrieving, updatin
 Spring Boot implementation of [Hyperskill's]( https://hyperskill.org/projects/180) project that includes JSON, REST API, Spring Boot Security, H2 database, LocalDateTime, Project Lombok concepts.
 The program is a multi-user web service that allows storing, retrieving, updating, and deleting recipes.
 
-**Example 1:** a `POST /api/recipe/new` request without authentication
+
+## Usage
+
+1. Clone the repository
+    ```shell
+    git clone https://github.com/MichalLeh/Recipes.git
+    ```
+
+2. Setup the environment
+    ```shell
+    cd Recipes
+    cp .env.example .env
+    ```
+   Edit the `.env` file to your needs. Since the project uses H2 as a database, you just need to
+   the `H2_DATABASE_URL`, `H2_DATABASE_USERNAME` and `H2_DATABASE_PASSWORD` variables. The default values are:
+    ```shell
+    H2_DATABASE_URL=h2:file:../quizdb
+    H2_DATABASE_USERNAME=sa
+    H2_DATABASE_PASSWORD=
+    ```
+
+3. Build and run the project
+    ```shell
+    ./gradlew build
+    ./gradlew bootRun
+    ```
+
+The endpoints can be accessed using a browser or a tool that allows you to send HTTP requests
+like [Postman](https://www.getpostman.com/).
+
+### Processes
+
+- [Registration](#registration)
+- [Post a new recipe](#post-a-new-recipe)
+- [Update a recipe](#update-a-recipe)
+- [Get a recipe by id](#get-a-recipe-by-id)
+- [Get recipes](#get-recipes)
+
+- [Delete a recipe](#delete-a-recipe)
+
+## API Endpoints
+
+| Endpoint                           | Anonymous | User |
+|------------------------------------|-----------|------|
+| POST /api/register                 | +         | +    |
+| POST /api/recipe/new               | -         | +    |
+| GET /api/recipe/{id}               | -         | +    |
+| PUT /api/recipe/{id}               | -         | +    |
+| DELETE /api/recipe/{id}            | -         | +    |
+| GET /api/recipe/search?name={name} | -         | +    |
+
+_'+' means the user with the role above can access that endpoint. '-' means the user with the role above does not have
+access to that endpoint._
+
+### Examples
+
+#### Registration
+
+**Example 1:** a `POST /api/register` request
+
+*Request body:*
+
+```
+{
+   "email": "Michal@some.com",
+   "password": "Recipe123"
+}
+```
+Status code: `200 (Ok) `
+
+#### Post a new recipe
+
+**Example 2:** a `POST /api/recipe/new` request without authentication
 
 *Request body:*
 
@@ -18,18 +90,6 @@ The program is a multi-user web service that allows storing, retrieving, updatin
 }
 ```
 Status code: `401 (Unauthorized)`
-
-**Example 2:** a `POST /api/register` request
-
-*Request body:*
-
-```
-{
-   "email": "Michal@some.com",
-   "password": "Recipe123"
-}
-```
-Status code: `200 (Ok) `
 
 Further `POST /api/recipe/new` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
@@ -52,8 +112,53 @@ Further `POST /api/recipe/new` request with basic authentication; email (login):
     "id": 1
 }
 ```
+Further a  `POST /api/recipe/new` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
-Further  `PUT /api/recipe/1` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
+*Request body:*
+
+```
+{
+   "name": "Chocolate Ice Cream",
+   "category": "dessert",
+   "description": "Tastes divine, easy to make at home ...",
+   "ingredients": ["dark chocolate", "double cream", "vanilla extract", „milk chocolate chips“],
+   "directions": ["Melt the chocolate", "Leave to cool it","Mix the cream, milk and vanilla", "Fold the melted chocolate and cocoa powder into the cream mix", "..."]
+}
+```
+
+*Response:*
+
+```
+{
+    "id": 2
+}
+```
+
+Further a  `POST /api/recipe/new` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
+
+*Request body:*
+
+```
+{
+   "name": "Chocolate Ice Cream",
+   "category": "dessert",
+   "description": "Tastes divine, easy to make at home ...",
+   "ingredients": ["dark chocolate", "double cream", "vanilla extract", „milk chocolate chips“],
+   "directions": ["Melt the chocolate", "Leave to cool it","Mix the cream, milk and vanilla", "Fold the melted chocolate and cocoa powder into the cream mix", "..."]
+}
+```
+
+*Response:*
+
+```
+{
+    "id": 3
+}
+```
+
+#### Update a recipe
+
+**Example 3:**  `PUT /api/recipe/1` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
 *Request body:*
 
@@ -69,7 +174,9 @@ Further  `PUT /api/recipe/1` request with basic authentication; email (login): M
 
 Status code: `204 (No Content) `
 
-Further  `GET /api/recipe/1` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
+#### Get a recipe by id
+
+**Example 4:**  `GET /api/recipe/1` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
 *Response:*
 ```
@@ -83,7 +190,7 @@ Further  `GET /api/recipe/1` request with basic authentication; email (login): M
 }
 ```
 
-**Example 3:** a `POST /api/register` request
+**Example 5:** a `POST /api/register` request
 
 *Request body:*
 
