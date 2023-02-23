@@ -16,24 +16,11 @@ The program is a multi-user web service that allows storing, retrieving, updatin
     ```shell
     git clone https://github.com/MichalLeh/Recipes.git
     ```
-
-2. Setup the environment
+2. Build and run the project
     ```shell
-    cd Recipes
-    cp .env.example .env
-    ```
-   Edit the `.env` file to your needs. Since the project uses H2 as a database, you just need to
-   the `H2_DATABASE_URL`, `H2_DATABASE_USERNAME` and `H2_DATABASE_PASSWORD` variables. The default values are:
-    ```shell
-    H2_DATABASE_URL=h2:file:../quizdb
-    H2_DATABASE_USERNAME=sa
-    H2_DATABASE_PASSWORD=
-    ```
-
-3. Build and run the project
-    ```shell
-    ./gradlew build
-    ./gradlew bootRun
+      cd Recipes
+      gradlew build
+      gradlew bootRun
     ```
 
 The endpoints can be accessed using a browser or a tool that allows you to send HTTP requests
