@@ -4,6 +4,11 @@ Multi-user web service with Spring Boot that allows storing, retrieving, updatin
 Spring Boot implementation of [Hyperskill's]( https://hyperskill.org/projects/180) project that includes JSON, REST API, Spring Boot Security, H2 database, LocalDateTime, Project Lombok concepts.
 The program is a multi-user web service that allows storing, retrieving, updating, and deleting recipes.
 
+## Requirements
+
+- JDK 11
+- Gradle 7.6
+- Spring Boot 2.7.2
 
 ## Usage
 
