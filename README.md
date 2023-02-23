@@ -7,7 +7,7 @@ The program is a multi-user web service that allows storing, retrieving, updatin
 ## Requirements
 
 - JDK 11
-- Gradle 7.6
+- Gradle 7.3.3
 - Spring Boot 2.7.2
 
 ## Usage
