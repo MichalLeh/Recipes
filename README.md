@@ -89,6 +89,8 @@ Status code: `200 (Ok) `
    "directions": ["Boil water", "Pour boiling hot water into a mug", "Add fresh mint leaves", "Mix and let the mint leaves seep for 3-5 minutes", "Add honey and mix again"]
 }
 ```
+
+*Response:*
 Status code: `401 (Unauthorized)`
 
 Further `POST /api/recipe/new` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
@@ -172,7 +174,6 @@ Further a  `POST /api/recipe/new` request with basic authentication; email (logi
 }
 ```
 *Response:*
-
 Status code: `204 (No Content) `
 
 #### Get a recipe by id
