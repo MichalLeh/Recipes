@@ -52,7 +52,7 @@ _'+' means the registered user can access given endpoint. '-' means the unregist
 
 #### Registration
 
-**Example:** a `POST /api/register` request
+`POST /api/register` request
 
 *Request body:*
 
@@ -68,7 +68,7 @@ Status code: `200 (Ok) `
 
 #### Post a new recipe
 
-**Example:** a `POST /api/recipe/new` request without authentication
+`POST /api/recipe/new` request without authentication
 
 *Request body:*
 
@@ -152,7 +152,7 @@ Further a  `POST /api/recipe/new` request with basic authentication; email (logi
 
 #### Update a recipe
 
-**Example:**  `PUT /api/recipe/1` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
+`PUT /api/recipe/1` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
 *Request body:*
 
@@ -170,7 +170,7 @@ Status code: `204 (No Content) `
 
 #### Get a recipe by id
 
-**Example:**  `GET /api/recipe/1` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
+`GET /api/recipe/1` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
 *Response:*
 ```
@@ -185,7 +185,7 @@ Status code: `204 (No Content) `
 ```
 #### Get recipes by category
 
-**Example:**  Response for the `GET /api/recipe/search/?category=dessert` request
+`GET /api/recipe/search/?category=dessert` request
 
 *Response:*
 ```
@@ -207,7 +207,7 @@ Status code: `204 (No Content) `
 ```
 #### Delete a recipe by id
 
-**Example:** `DELETE /api/recipe/1` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
+`DELETE /api/recipe/1` request with basic authentication; email (login): Michal@some.com, and password: Recipe123
 
 *Response:*
 Status code: `204 (No Content) `
