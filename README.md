@@ -20,7 +20,6 @@ The program is a multi-user web service that allows storing, retrieving, updatin
     ```shell
       cd Recipes
       gradlew build
-      gradlew bootRun
     ```
 
 The endpoints can be accessed using a browser or a tool that allows you to send HTTP requests
