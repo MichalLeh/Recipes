@@ -11,7 +11,9 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.List;
-
+/**
+ * This class represents a recipe. It is also used as response object for the REST API.
+ */
 @Entity
 @Table(name="RECIPES")
 @Data
