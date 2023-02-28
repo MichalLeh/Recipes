@@ -8,7 +8,9 @@ import recipes.model.User;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
+/**
+ * This class implements the UserDetails interface and is used by Spring Security.
+ */
 public class UserDetailsImpl implements UserDetails {
     private final String username;
     private final String password;
@@ -31,7 +33,7 @@ public class UserDetailsImpl implements UserDetails {
     public String getUsername() {
         return username;
     }
-    //UNUSED METHODS BELOW
+    // Remaining methods below are not used in this project and just return true
     @Override
     public boolean isAccountNonExpired() {
         return true;
