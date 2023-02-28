@@ -20,11 +20,12 @@ public class UserController {
         this.userService = userService;
         this.encoder = encoder;
     }
-    // Receives a JSON object with two fields: email (string), and password (string).
-    // If a user with a specified email does not exist, the program saves (registers) the user in a database and responds with 200 (Ok).
-    // If a user is already in the database, respond with the 400 (Bad Request) status code.
-    // Both fields are required and must be valid: email should contain @ and . symbols, password should contain at least 8 characters and shouldn't be blank.
-    // If the fields do not meet these restrictions, the service should respond with 400 (Bad Request).
+     /**
+     * Registration of a new user.
+     *
+     * @param user New user to be registered
+     * @return A response entity with status code
+     */
     @PostMapping("/register")
     public ResponseEntity register (@Valid @RequestBody User user) {
         if (!userService.existsByEmailIgnoreCase(user.getEmail())){
