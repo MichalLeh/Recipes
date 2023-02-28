@@ -11,6 +11,9 @@ import javax.validation.constraints.Pattern;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class represents a user. It is used for authentication and authorization.
+ */
 @Entity
 @Table(name="USERS")
 @Data
