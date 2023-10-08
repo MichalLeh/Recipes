@@ -42,7 +42,8 @@ like [Postman](https://www.getpostman.com/).
 | POST /api/recipe/new                   | -         | +    |
 | PUT /api/recipe/{id}                   | -         | +    |
 | GET /api/recipe/{id}                   | -         | +    |
-| GET /api/recipe/search?category={name} | -         | +    |
+| GET /api/recipe/search/?category={category} | -         | +    |
+| GET /api/recipe/search/?name={name}    | -         | +    |
 | DELETE /api/recipe/{id}                | -         | +    |
 
 _'+' means the registered user can access given endpoint. '-' means the unregistered user can't access given endpoint._
